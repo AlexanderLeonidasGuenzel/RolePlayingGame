@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Role Playing Game</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <header>
@@ -18,7 +18,7 @@
           <div class="player-card">
             <!-- Player 1 -->
             <!-- Name -->
-            <h3>Player 1</h3>
+            <h3 >Player 1</h3>
             <div class="name-container">
               <label for="p1_name">Name</label>
               <input
@@ -32,9 +32,10 @@
             </div>
 
             <!-- Race choice-->
+            <!-- Human -->
             <div class="race-container">
-              <!-- Human -->
-              <input
+              <div class="human-container">
+                <input
                 id="p1_human"
                 type="radio"
                 name="p1_race"
@@ -42,16 +43,21 @@
                 checked="checked"
               />
               <label for="p1_human">Human</label>
+              </div>
+              
 
               <!-- Orc -->
-              <input id="p1_orc" type="radio" name="p1_race" value="orc" />
-              <label for="p1_orc">Orc</label>
+              <div class="orc-container">
+                <input id="p1_orc" type="radio" name="p1_race" value="orc" />
+                <label for="p1_orc">Orc</label>
+              </div>
             </div>
 
             <!-- Ring choice-->
             <div class="ring-container">
               <!-- Strong Ring -->
-              <input
+              <div class="strong-ring-container">
+                <input
                 type="radio"
                 name="p1_ring"
                 id="p1_strong_ring"
@@ -59,15 +65,19 @@
                 checked="checked;"
               />
               <label for="p1_strong_ring">Ring of Strenght</label>
+              </div>
+              
 
               <!-- Lucky Ring -->
-              <input
+              <div class="lucky-ring-container">
+                <input
                 type="radio"
                 name="p1_ring"
                 id="p1_lucky_ring"
                 value="lucky_ring"
               />
               <label for="p1_lucky_ring">Ring of Luck</label>
+              </div>
             </div>
           </div>
           <div class="player-card">
@@ -89,11 +99,15 @@
             <!-- Race -->
             <div class="race-container">
               <!-- Human -->
-              <input id="p2_human" type="radio" name="p2_race" value="human" />
-              <label for="p2_human">Human</label>
+              <div class="human-container">
+                <input id="p2_human" type="radio" name="p2_race" value="human" />
+                <label for="p2_human">Human</label>
+              </div>
+              
 
               <!-- Orc -->
-              <input
+              <div class="orc-container">
+                <input
                 id="p2_orc"
                 type="radio"
                 name="p2_race"
@@ -101,21 +115,25 @@
                 checked="checked"
               />
               <label for="p2_orc">Orc</label>
+              </div>
             </div>
 
             <!-- Ring -->
             <div class="ring-container">
               <!-- Strong Ring -->
-              <input
+              <div class="strong-ring-container">
+                <input
                 type="radio"
                 name="p2_ring"
                 id="p2_strong_ring"
                 value="strong_ring"
               />
               <label for="p2_strong_ring">Ring of Strength</label>
-
+              </div>
+              
               <!-- Lucky Ring -->
-              <input
+              <div class="lucky-ring-container">
+                <input
                 type="radio"
                 name="p2_ring"
                 id="p2_lucky_ring"
@@ -123,6 +141,8 @@
                 checked="checked;"
               />
               <label for="p2_lucky_ring">Ring of Luck</label>
+              </div>
+              
             </div>
           </div>
         </div>
