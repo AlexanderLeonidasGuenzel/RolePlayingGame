@@ -1,0 +1,11 @@
+.player-name {
+  text-transform: capitalize;
+}
+
+.orc {
+  color: rgb(150, 0, 0);
+}
+
+.human {
+  color: rgb(0, 0, 150);
+}
