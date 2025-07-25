@@ -74,37 +74,57 @@ else{
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Role Playing Game</title>
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/game.css">
   </head>
   <body>
-    <?php $p1Css = strtolower(get_class($p1)); ?>
-    <h2 class="player-name <?php echo $p1Css; ?>"><?php echo $p1->name ?></h2>
-    <p><span>Race: </span><?php echo get_class($p1)?></p>
-    <p><span>Health: </span><span><?php echo $p1->getHealth() ?></span></p>
-    <p><span>Strength: </span><span><?php echo $p1->getStrength() ?></span></p>
-    <p><span>Ring: </span><span><?php echo $p1->ring->toString() ?></span></p>
-    <form action="game.php" method="post">
-      <input type="submit" name="p1_attack" value="attack" <?php if($end || ($round == 2)) echo 'disabled'?>>
-    </form>
-
-    <?php $p2Css = strtolower(get_class($p2)); ?>
-    <h2 class="player-name <?php echo $p2Css; ?>"><?php echo $p2->name ?></h2>
-    <p><span>Race: </span><?php echo get_class($p2)?></p>
-    <p><span>Health: </span><span><?php echo $p2->getHealth() ?></span></p>
-    <p><span>Strength: </span><span><?php echo $p2->getStrength() ?></span></p>
-    <p><span>Ring: </span><span><?php echo $p2->ring->toString() ?></span></p>
-    <form action="game.php" method="post">
-      <input type="submit" name="p2_attack" value="attack" <?php if($end || ($round == 1)) echo 'disabled'?>>
-    </form>
-    <p>
-      <?php 
-        echo $info; 
-          if($end){
-          echo ' <form action="index.php" method="get">
-          <input type="submit" value="New Game">
-          </form>';
-        }
-      ?>
-    </p>
+    <main>
+      <div class="box">
+        <div class="card-container game">
+          <div class="player-card">
+            <div class="stats">
+              <?php $p1Css = strtolower(get_class($p1)); ?>
+              <h2 class="player-name <?php echo $p1Css; ?>"><?php echo $p1->name ?></h2>
+              <p><span class="highlight">Race: </span><?php echo get_class($p1) ?></p>
+              <p><span class="highlight">Health: </span><span><?php echo $p1->getHealth() ?></span></p>
+              <p><span class="highlight">Strength: </span><span><?php echo $p1->getStrength() ?></span></p>
+              <p><span class="highlight">Ring: </span><span><?php echo explode('(',$p1->ring->toString() )[0]   ?></span></p>
+              <p><span><?php echo '(' . explode('(',$p1->ring->toString() )[1]   ?></span></p>
+            </div>
+            <div class="attack-btn">
+              <form action="game.php" method="post">
+                <input class="btn attack" type="submit" name="p1_attack" value="attack" <?php if($end || ($round == 2)) echo 'disabled'?>>
+              </form>
+            </div>
+          </div>
+          <div class="player-card">
+            <div class="stats">
+              <?php $p2Css = strtolower(get_class($p2)); ?>
+              <h2 class="player-name <?php echo $p2Css; ?>"><?php echo $p2->name ?></h2>
+              <p><span class="highlight">Race: </span><?php echo get_class($p2)?></p>
+              <p><span class="highlight">Health: </span><span><?php echo $p2->getHealth() ?></span></p>
+              <p><span class="highlight">Strength: </span><span><?php echo $p2->getStrength() ?></span></p>
+              <p><span class="highlight">Ring: </span><span><?php echo explode('(',$p2->ring->toString() )[0]   ?></span></p>
+              <p><span><?php echo '(' . explode('(',$p2->ring->toString() )[1]   ?></span></p>
+            </div>
+            <div class="attack-btn">
+              <form action="game.php" method="post">
+                <input class="btn attack" type="submit" name="p2_attack" value="attack" <?php if($end || ($round == 1)) echo 'disabled'?>>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        <?php 
+          echo $info; 
+            if($end){
+            echo ' <form action="index.php" method="get">
+            <input class="btn game" type="submit" value="New Game">
+            </form>';
+          }
+        ?>
+      </p>
+    </main>
   </body>
 </html>

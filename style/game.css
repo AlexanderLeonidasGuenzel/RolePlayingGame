@@ -9,3 +9,8 @@
 .human {
   color: rgb(0, 0, 150);
 }
+.attack-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}

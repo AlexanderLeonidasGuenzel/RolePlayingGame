@@ -6,15 +6,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Role Playing Game</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style.css?v=2" />
   </head>
   <body>
     <header>
       <h1>Role Playing Game</h1>
     </header>
     <main>
-      <form action="game.php" method="post">
-        <div class="card-container">
+      <form class="box" action="game.php" method="post">
+        <div class="card-container" id="character-selection">
           <div class="player-card">
             <!-- Player 1 -->
             <!-- Name -->
@@ -146,7 +146,7 @@
             </div>
           </div>
         </div>
-        <input class="btn" type="submit" name="btn-submit" value="Start Game" />
+        <input class="btn game" type="submit" name="btn-submit" value="Start Game" />
       </form>
     </main>
     <footer>
