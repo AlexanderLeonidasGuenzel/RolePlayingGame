@@ -175,3 +175,20 @@ main {
 .highlight {
   font-weight: 700;
 }
+
+.player-name {
+  text-transform: capitalize;
+}
+
+.orc {
+  color: rgb(150, 0, 0);
+}
+
+.human {
+  color: rgb(0, 0, 150);
+}
+.attack-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}

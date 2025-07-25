@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Role Playing Game</title>
-    <link rel="stylesheet" href="./style/style.css?v=2" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <header>
